@@ -1,0 +1,20 @@
+PODS:
+  - pop (1.0.12)
+  - UltraDrawerView (0.3.0):
+    - pop (~> 1.0)
+
+DEPENDENCIES:
+  - UltraDrawerView
+
+SPEC REPOS:
+  trunk:
+    - pop
+    - UltraDrawerView
+
+SPEC CHECKSUMS:
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  UltraDrawerView: 942254e5668ecfbc72d98b869cb4cbc30a89422f
+
+PODFILE CHECKSUM: cc2e03b975d51163b06b6b80d73de69213975543
+
+COCOAPODS: 1.9.3

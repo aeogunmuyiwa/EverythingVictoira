@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow Everything victoria to access your device location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow Everything victoria to access your device location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow Everything victoria to access your device location</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Raleway-Bold.ttf</string>
+		<string>Raleway-MediumItalic.ttf</string>
+		<string>Raleway-SemiBoldItalic.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

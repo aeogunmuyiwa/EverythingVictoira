@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_everything_Victoria_everything_VictoriaUITests : NSObject
+@end
+@implementation PodsDummy_Pods_everything_Victoria_everything_VictoriaUITests
+@end

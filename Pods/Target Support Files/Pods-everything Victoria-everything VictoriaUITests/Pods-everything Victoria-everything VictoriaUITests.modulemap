@@ -1,0 +1,6 @@
+framework module Pods_everything_Victoria_everything_VictoriaUITests {
+  umbrella header "Pods-everything Victoria-everything VictoriaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

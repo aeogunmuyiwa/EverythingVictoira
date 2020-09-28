@@ -3,19 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AAD1B84A368125307D26704 /* Pods_everything_Victoria_everything_VictoriaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D313EB08BB9D8B1094104166 /* Pods_everything_Victoria_everything_VictoriaUITests.framework */; };
+		46D00EDE251F0DDB00F91830 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00EDD251F0DDB00F91830 /* ApiManager.swift */; };
+		46D00EE3251F132000F91830 /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00EE2251F132000F91830 /* ServiceListViewController.swift */; };
+		46D00EE8251F267300F91830 /* ServiceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00EE7251F267300F91830 /* ServiceListViewModel.swift */; };
+		46D00EEE251F320800F91830 /* ServiceListCollectionViewCell .swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00EED251F320800F91830 /* ServiceListCollectionViewCell .swift */; };
+		46D00EF7251F37A900F91830 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 46D00EF6251F37A900F91830 /* RxSwift */; };
+		46D00EFB251F37A900F91830 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 46D00EFA251F37A900F91830 /* RxRelay */; };
+		46D00EFD251F37A900F91830 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 46D00EFC251F37A900F91830 /* RxCocoa */; };
+		46D00EFF251F37A900F91830 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 46D00EFE251F37A900F91830 /* RxBlocking */; };
+		46D00F14251F802100F91830 /* EmergencyServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F13251F802100F91830 /* EmergencyServicesViewController.swift */; };
+		46D00F19251F80C700F91830 /* EmergencyServicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F18251F80C700F91830 /* EmergencyServicesViewModel.swift */; };
+		46D00F1E251F84EB00F91830 /* EmergencyServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F1D251F84EB00F91830 /* EmergencyServicesTableViewCell.swift */; };
+		46D00F23251F8F7500F91830 /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F22251F8F7500F91830 /* NavigationUtil.swift */; };
+		46D00F31251FBB1B00F91830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F30251FBB1B00F91830 /* MapViewController.swift */; };
+		46D00F36251FBBCF00F91830 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F35251FBBCF00F91830 /* MapViewModel.swift */; };
+		46D00F43251FD81900F91830 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F42251FD81800F91830 /* AlertModel.swift */; };
+		46D00F482520E03100F91830 /* notificationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F472520E03100F91830 /* notificationUtil.swift */; };
+		A40551643B0AE6A9F4D2316F /* Pods_everything_VictoriaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D162BAE1B23CA7297FE68B /* Pods_everything_VictoriaTests.framework */; };
 		B24BB2072510D7260063C297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB2062510D7260063C297 /* AppDelegate.swift */; };
 		B24BB2092510D7260063C297 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB2082510D7260063C297 /* SceneDelegate.swift */; };
-		B24BB20B2510D7260063C297 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB20A2510D7260063C297 /* ViewController.swift */; };
+		B24BB20B2510D7260063C297 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB20A2510D7260063C297 /* HomeViewController.swift */; };
 		B24BB20E2510D7260063C297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24BB20C2510D7260063C297 /* Main.storyboard */; };
 		B24BB2112510D7260063C297 /* everything_Victoria.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B24BB20F2510D7260063C297 /* everything_Victoria.xcdatamodeld */; };
 		B24BB2132510D7270063C297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24BB2122510D7270063C297 /* Assets.xcassets */; };
 		B24BB2162510D7270063C297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24BB2142510D7270063C297 /* LaunchScreen.storyboard */; };
 		B24BB2212510D7270063C297 /* everything_VictoriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB2202510D7270063C297 /* everything_VictoriaTests.swift */; };
 		B24BB22C2510D7270063C297 /* everything_VictoriaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB22B2510D7270063C297 /* everything_VictoriaUITests.swift */; };
+		B24BB23D2510D8F00063C297 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB23C2510D8F00063C297 /* CustomColors.swift */; };
+		B24BB2442510DF640063C297 /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B24BB23F2510DF640063C297 /* Raleway-MediumItalic.ttf */; };
+		B24BB2452510DF640063C297 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B24BB2402510DF640063C297 /* Poppins-Medium.ttf */; };
+		B24BB2462510DF640063C297 /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B24BB2412510DF640063C297 /* Raleway-SemiBoldItalic.ttf */; };
+		B24BB2472510DF640063C297 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B24BB2422510DF640063C297 /* Poppins-Regular.ttf */; };
+		B24BB2482510DF640063C297 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B24BB2432510DF640063C297 /* Raleway-Bold.ttf */; };
+		B24BB24A2510E2280063C297 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB2492510E2280063C297 /* UIView.swift */; };
+		B24BB24C2510E2960063C297 /* parkDetaiLCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB24B2510E2960063C297 /* parkDetaiLCollectionViewCell.swift */; };
+		B24BB24E2510E39D0063C297 /* CustomPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB24D2510E39D0063C297 /* CustomPark.swift */; };
+		B24BB2502510E54D0063C297 /* CustomparkDetaiLCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB24F2510E54D0063C297 /* CustomparkDetaiLCollectionViewCell.swift */; };
+		B24BB2522510F7210063C297 /* OtherParkDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB2512510F7210063C297 /* OtherParkDetailCollectionViewCell.swift */; };
+		B24BB2542510F7EE0063C297 /* CustomOtherParkDetaiLCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB2532510F7EE0063C297 /* CustomOtherParkDetaiLCollectionViewCell.swift */; };
+		B267CBA22514E9660037ECE7 /* criticalInfrastructureFacilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267CBA12514E9660037ECE7 /* criticalInfrastructureFacilities.swift */; };
+		F248C05E6DC63D9144757CCF /* Pods_everything_Victoria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0189463EB0E3B2E6FD263235 /* Pods_everything_Victoria.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +68,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0189463EB0E3B2E6FD263235 /* Pods_everything_Victoria.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_everything_Victoria.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0517CFAAF56A5E32F5825378 /* Pods-everything Victoria.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everything Victoria.debug.xcconfig"; path = "Target Support Files/Pods-everything Victoria/Pods-everything Victoria.debug.xcconfig"; sourceTree = "<group>"; };
+		0799E7FFCDA783F73999EA1C /* Pods-everything Victoria.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everything Victoria.release.xcconfig"; path = "Target Support Files/Pods-everything Victoria/Pods-everything Victoria.release.xcconfig"; sourceTree = "<group>"; };
+		46D00EDD251F0DDB00F91830 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		46D00EE2251F132000F91830 /* ServiceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
+		46D00EE7251F267300F91830 /* ServiceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewModel.swift; sourceTree = "<group>"; };
+		46D00EED251F320800F91830 /* ServiceListCollectionViewCell .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceListCollectionViewCell .swift"; sourceTree = "<group>"; };
+		46D00F13251F802100F91830 /* EmergencyServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyServicesViewController.swift; sourceTree = "<group>"; };
+		46D00F18251F80C700F91830 /* EmergencyServicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyServicesViewModel.swift; sourceTree = "<group>"; };
+		46D00F1D251F84EB00F91830 /* EmergencyServicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyServicesTableViewCell.swift; sourceTree = "<group>"; };
+		46D00F22251F8F7500F91830 /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
+		46D00F30251FBB1B00F91830 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		46D00F35251FBBCF00F91830 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		46D00F42251FD81800F91830 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		46D00F472520E03100F91830 /* notificationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationUtil.swift; sourceTree = "<group>"; };
+		48C13A5D392737951CEB83ED /* Pods-everything VictoriaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everything VictoriaTests.debug.xcconfig"; path = "Target Support Files/Pods-everything VictoriaTests/Pods-everything VictoriaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		50FF720B3392FFA64F83F311 /* Pods-everything VictoriaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everything VictoriaTests.release.xcconfig"; path = "Target Support Files/Pods-everything VictoriaTests/Pods-everything VictoriaTests.release.xcconfig"; sourceTree = "<group>"; };
+		A9C538413C160430911AA02F /* Pods-everything Victoria-everything VictoriaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everything Victoria-everything VictoriaUITests.debug.xcconfig"; path = "Target Support Files/Pods-everything Victoria-everything VictoriaUITests/Pods-everything Victoria-everything VictoriaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B24BB2032510D7250063C297 /* everything Victoria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "everything Victoria.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24BB2062510D7260063C297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B24BB2082510D7260063C297 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B24BB20A2510D7260063C297 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B24BB20A2510D7260063C297 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B24BB20D2510D7260063C297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B24BB2102510D7260063C297 /* everything_Victoria.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = everything_Victoria.xcdatamodel; sourceTree = "<group>"; };
 		B24BB2122510D7270063C297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +101,22 @@
 		B24BB2272510D7270063C297 /* everything VictoriaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "everything VictoriaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24BB22B2510D7270063C297 /* everything_VictoriaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = everything_VictoriaUITests.swift; sourceTree = "<group>"; };
 		B24BB22D2510D7270063C297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B24BB23C2510D8F00063C297 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		B24BB23F2510DF640063C297 /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
+		B24BB2402510DF640063C297 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		B24BB2412510DF640063C297 /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		B24BB2422510DF640063C297 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		B24BB2432510DF640063C297 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		B24BB2492510E2280063C297 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B24BB24B2510E2960063C297 /* parkDetaiLCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parkDetaiLCollectionViewCell.swift; sourceTree = "<group>"; };
+		B24BB24D2510E39D0063C297 /* CustomPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPark.swift; sourceTree = "<group>"; };
+		B24BB24F2510E54D0063C297 /* CustomparkDetaiLCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomparkDetaiLCollectionViewCell.swift; sourceTree = "<group>"; };
+		B24BB2512510F7210063C297 /* OtherParkDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherParkDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		B24BB2532510F7EE0063C297 /* CustomOtherParkDetaiLCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOtherParkDetaiLCollectionViewCell.swift; sourceTree = "<group>"; };
+		B267CBA12514E9660037ECE7 /* criticalInfrastructureFacilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = criticalInfrastructureFacilities.swift; sourceTree = "<group>"; };
+		D313EB08BB9D8B1094104166 /* Pods_everything_Victoria_everything_VictoriaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_everything_Victoria_everything_VictoriaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7D162BAE1B23CA7297FE68B /* Pods_everything_VictoriaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_everything_VictoriaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6433B70421D14113532051 /* Pods-everything Victoria-everything VictoriaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everything Victoria-everything VictoriaUITests.release.xcconfig"; path = "Target Support Files/Pods-everything Victoria-everything VictoriaUITests/Pods-everything Victoria-everything VictoriaUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +124,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D00EFB251F37A900F91830 /* RxRelay in Frameworks */,
+				46D00EFD251F37A900F91830 /* RxCocoa in Frameworks */,
+				46D00EF7251F37A900F91830 /* RxSwift in Frameworks */,
+				46D00EFF251F37A900F91830 /* RxBlocking in Frameworks */,
+				F248C05E6DC63D9144757CCF /* Pods_everything_Victoria.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40551643B0AE6A9F4D2316F /* Pods_everything_VictoriaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +144,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAD1B84A368125307D26704 /* Pods_everything_Victoria_everything_VictoriaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46D00EEC251F31E600F91830 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				B24BB2532510F7EE0063C297 /* CustomOtherParkDetaiLCollectionViewCell.swift */,
+				46D00EED251F320800F91830 /* ServiceListCollectionViewCell .swift */,
+				B24BB24F2510E54D0063C297 /* CustomparkDetaiLCollectionViewCell.swift */,
+				B24BB2512510F7210063C297 /* OtherParkDetailCollectionViewCell.swift */,
+				B24BB24B2510E2960063C297 /* parkDetaiLCollectionViewCell.swift */,
+				46D00F1D251F84EB00F91830 /* EmergencyServicesTableViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		4DBD5759B0027B87347282C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0189463EB0E3B2E6FD263235 /* Pods_everything_Victoria.framework */,
+				D313EB08BB9D8B1094104166 /* Pods_everything_Victoria_everything_VictoriaUITests.framework */,
+				D7D162BAE1B23CA7297FE68B /* Pods_everything_VictoriaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B24BB1FA2510D7250063C297 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +181,8 @@
 				B24BB21F2510D7270063C297 /* everything VictoriaTests */,
 				B24BB22A2510D7270063C297 /* everything VictoriaUITests */,
 				B24BB2042510D7250063C297 /* Products */,
+				E41AC44F8C8FC551DE448FC8 /* Pods */,
+				4DBD5759B0027B87347282C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +199,12 @@
 		B24BB2052510D7250063C297 /* everything Victoria */ = {
 			isa = PBXGroup;
 			children = (
+				46D00EEC251F31E600F91830 /* CustomCells */,
+				B24BB23B2510D8410063C297 /* Controllers */,
+				B24BB23A2510D8390063C297 /* Models */,
+				B24BB2392510D82B0063C297 /* ViewModel */,
 				B24BB2062510D7260063C297 /* AppDelegate.swift */,
 				B24BB2082510D7260063C297 /* SceneDelegate.swift */,
-				B24BB20A2510D7260063C297 /* ViewController.swift */,
 				B24BB20C2510D7260063C297 /* Main.storyboard */,
 				B24BB2122510D7270063C297 /* Assets.xcassets */,
 				B24BB2142510D7270063C297 /* LaunchScreen.storyboard */,
@@ -131,6 +232,68 @@
 			path = "everything VictoriaUITests";
 			sourceTree = "<group>";
 		};
+		B24BB2392510D82B0063C297 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				46D00EE7251F267300F91830 /* ServiceListViewModel.swift */,
+				46D00F18251F80C700F91830 /* EmergencyServicesViewModel.swift */,
+				46D00F35251FBBCF00F91830 /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B24BB23A2510D8390063C297 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B24BB23E2510DF640063C297 /* Fonts */,
+				B24BB23C2510D8F00063C297 /* CustomColors.swift */,
+				B24BB2492510E2280063C297 /* UIView.swift */,
+				B24BB24D2510E39D0063C297 /* CustomPark.swift */,
+				B267CBA12514E9660037ECE7 /* criticalInfrastructureFacilities.swift */,
+				46D00EDD251F0DDB00F91830 /* ApiManager.swift */,
+				46D00F22251F8F7500F91830 /* NavigationUtil.swift */,
+				46D00F42251FD81800F91830 /* AlertModel.swift */,
+				46D00F472520E03100F91830 /* notificationUtil.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B24BB23B2510D8410063C297 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B24BB20A2510D7260063C297 /* HomeViewController.swift */,
+				46D00EE2251F132000F91830 /* ServiceListViewController.swift */,
+				46D00F13251F802100F91830 /* EmergencyServicesViewController.swift */,
+				46D00F30251FBB1B00F91830 /* MapViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B24BB23E2510DF640063C297 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B24BB23F2510DF640063C297 /* Raleway-MediumItalic.ttf */,
+				B24BB2402510DF640063C297 /* Poppins-Medium.ttf */,
+				B24BB2412510DF640063C297 /* Raleway-SemiBoldItalic.ttf */,
+				B24BB2422510DF640063C297 /* Poppins-Regular.ttf */,
+				B24BB2432510DF640063C297 /* Raleway-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E41AC44F8C8FC551DE448FC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0517CFAAF56A5E32F5825378 /* Pods-everything Victoria.debug.xcconfig */,
+				0799E7FFCDA783F73999EA1C /* Pods-everything Victoria.release.xcconfig */,
+				A9C538413C160430911AA02F /* Pods-everything Victoria-everything VictoriaUITests.debug.xcconfig */,
+				DC6433B70421D14113532051 /* Pods-everything Victoria-everything VictoriaUITests.release.xcconfig */,
+				48C13A5D392737951CEB83ED /* Pods-everything VictoriaTests.debug.xcconfig */,
+				50FF720B3392FFA64F83F311 /* Pods-everything VictoriaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,15 +301,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B24BB2302510D7270063C297 /* Build configuration list for PBXNativeTarget "everything Victoria" */;
 			buildPhases = (
+				E0FEA843C995B0DD8E861CA6 /* [CP] Check Pods Manifest.lock */,
 				B24BB1FF2510D7250063C297 /* Sources */,
 				B24BB2002510D7250063C297 /* Frameworks */,
 				B24BB2012510D7250063C297 /* Resources */,
+				8407908BE8F639DEEC9CA257 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "everything Victoria";
+			packageProductDependencies = (
+				46D00EF6251F37A900F91830 /* RxSwift */,
+				46D00EFA251F37A900F91830 /* RxRelay */,
+				46D00EFC251F37A900F91830 /* RxCocoa */,
+				46D00EFE251F37A900F91830 /* RxBlocking */,
+			);
 			productName = "everything Victoria";
 			productReference = B24BB2032510D7250063C297 /* everything Victoria.app */;
 			productType = "com.apple.product-type.application";
@@ -155,6 +326,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B24BB2332510D7270063C297 /* Build configuration list for PBXNativeTarget "everything VictoriaTests" */;
 			buildPhases = (
+				AA7508BA13E37A2B9E96ECE7 /* [CP] Check Pods Manifest.lock */,
 				B24BB2182510D7270063C297 /* Sources */,
 				B24BB2192510D7270063C297 /* Frameworks */,
 				B24BB21A2510D7270063C297 /* Resources */,
@@ -173,9 +345,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B24BB2362510D7270063C297 /* Build configuration list for PBXNativeTarget "everything VictoriaUITests" */;
 			buildPhases = (
+				ADEBFDD32B05355D37C2A0E3 /* [CP] Check Pods Manifest.lock */,
 				B24BB2232510D7270063C297 /* Sources */,
 				B24BB2242510D7270063C297 /* Frameworks */,
 				B24BB2252510D7270063C297 /* Resources */,
+				EC19610AA83FC7AC7B49A2DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,6 +393,9 @@
 				Base,
 			);
 			mainGroup = B24BB1FA2510D7250063C297;
+			packageReferences = (
+				46D00EF5251F37A900F91830 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = B24BB2042510D7250063C297 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,8 +413,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B24BB2162510D7270063C297 /* LaunchScreen.storyboard in Resources */,
+				B24BB2442510DF640063C297 /* Raleway-MediumItalic.ttf in Resources */,
+				B24BB2472510DF640063C297 /* Poppins-Regular.ttf in Resources */,
 				B24BB2132510D7270063C297 /* Assets.xcassets in Resources */,
+				B24BB2462510DF640063C297 /* Raleway-SemiBoldItalic.ttf in Resources */,
 				B24BB20E2510D7260063C297 /* Main.storyboard in Resources */,
+				B24BB2452510DF640063C297 /* Poppins-Medium.ttf in Resources */,
+				B24BB2482510DF640063C297 /* Raleway-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +439,137 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8407908BE8F639DEEC9CA257 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-everything Victoria/Pods-everything Victoria-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-everything Victoria/Pods-everything Victoria-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-everything Victoria/Pods-everything Victoria-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA7508BA13E37A2B9E96ECE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-everything VictoriaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADEBFDD32B05355D37C2A0E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-everything Victoria-everything VictoriaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0FEA843C995B0DD8E861CA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-everything Victoria-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC19610AA83FC7AC7B49A2DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-everything Victoria-everything VictoriaUITests/Pods-everything Victoria-everything VictoriaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-everything Victoria-everything VictoriaUITests/Pods-everything Victoria-everything VictoriaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-everything Victoria-everything VictoriaUITests/Pods-everything Victoria-everything VictoriaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B24BB1FF2510D7250063C297 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B24BB20B2510D7260063C297 /* ViewController.swift in Sources */,
+				B24BB2502510E54D0063C297 /* CustomparkDetaiLCollectionViewCell.swift in Sources */,
+				46D00EEE251F320800F91830 /* ServiceListCollectionViewCell .swift in Sources */,
+				B24BB20B2510D7260063C297 /* HomeViewController.swift in Sources */,
+				B267CBA22514E9660037ECE7 /* criticalInfrastructureFacilities.swift in Sources */,
+				46D00F1E251F84EB00F91830 /* EmergencyServicesTableViewCell.swift in Sources */,
+				B24BB23D2510D8F00063C297 /* CustomColors.swift in Sources */,
+				46D00F482520E03100F91830 /* notificationUtil.swift in Sources */,
+				B24BB24C2510E2960063C297 /* parkDetaiLCollectionViewCell.swift in Sources */,
+				B24BB2522510F7210063C297 /* OtherParkDetailCollectionViewCell.swift in Sources */,
 				B24BB2072510D7260063C297 /* AppDelegate.swift in Sources */,
+				B24BB2542510F7EE0063C297 /* CustomOtherParkDetaiLCollectionViewCell.swift in Sources */,
+				B24BB24E2510E39D0063C297 /* CustomPark.swift in Sources */,
+				46D00F19251F80C700F91830 /* EmergencyServicesViewModel.swift in Sources */,
+				46D00EE3251F132000F91830 /* ServiceListViewController.swift in Sources */,
+				46D00F43251FD81900F91830 /* AlertModel.swift in Sources */,
+				46D00F31251FBB1B00F91830 /* MapViewController.swift in Sources */,
+				46D00EDE251F0DDB00F91830 /* ApiManager.swift in Sources */,
+				46D00F14251F802100F91830 /* EmergencyServicesViewController.swift in Sources */,
 				B24BB2112510D7260063C297 /* everything_Victoria.xcdatamodeld in Sources */,
+				46D00F36251FBBCF00F91830 /* MapViewModel.swift in Sources */,
+				B24BB24A2510E2280063C297 /* UIView.swift in Sources */,
+				46D00F23251F8F7500F91830 /* NavigationUtil.swift in Sources */,
+				46D00EE8251F267300F91830 /* ServiceListViewModel.swift in Sources */,
 				B24BB2092510D7260063C297 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +741,7 @@
 		};
 		B24BB2312510D7270063C297 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0517CFAAF56A5E32F5825378 /* Pods-everything Victoria.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +760,7 @@
 		};
 		B24BB2322510D7270063C297 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0799E7FFCDA783F73999EA1C /* Pods-everything Victoria.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +779,7 @@
 		};
 		B24BB2342510D7270063C297 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48C13A5D392737951CEB83ED /* Pods-everything VictoriaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +802,7 @@
 		};
 		B24BB2352510D7270063C297 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50FF720B3392FFA64F83F311 /* Pods-everything VictoriaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +825,7 @@
 		};
 		B24BB2372510D7270063C297 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9C538413C160430911AA02F /* Pods-everything Victoria-everything VictoriaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +846,7 @@
 		};
 		B24BB2382510D7270063C297 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC6433B70421D14113532051 /* Pods-everything Victoria-everything VictoriaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -594,6 +905,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46D00EF5251F37A900F91830 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46D00EF6251F37A900F91830 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46D00EF5251F37A900F91830 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		46D00EFA251F37A900F91830 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46D00EF5251F37A900F91830 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		46D00EFC251F37A900F91830 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46D00EF5251F37A900F91830 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		46D00EFE251F37A900F91830 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46D00EF5251F37A900F91830 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B24BB20F2510D7260063C297 /* everything_Victoria.xcdatamodeld */ = {

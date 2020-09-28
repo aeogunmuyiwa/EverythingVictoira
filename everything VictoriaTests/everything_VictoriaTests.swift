@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import RxSwift
+
 @testable import everything_Victoria
 
 class everything_VictoriaTests: XCTestCase {
