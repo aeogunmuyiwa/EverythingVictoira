@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 struct criticalInfrastructureFacilities: Decodable {
     let type : String?
@@ -14,20 +15,40 @@ struct criticalInfrastructureFacilities: Decodable {
     let features : [features]?    
 }
 
-//struct criticalInfrastructureFacilities_Manager {
-//    let criticalInfrastructureApikey = "https://opendata.arcgis.com/datasets/5d287a2955f44efe8567f9ef950f2dbc_1.geojson"
-//    func fetchData (closure : @escaping (Result<criticalInfrastructureFacilities>) -> Void){
-//        apiManager.init().dataRequest(with: criticalInfrastructureApikey, objectType: criticalInfrastructureFacilities.self, completion: {result in
-//            switch result {
-//                  case .success(let object):
-//                    closure(.success(object))
-//                  case .failure(let error):
-//                    closure(.failure( APPError.jsonParsingError(error)))
-//            }
-//        })
-//    }
-//}
 
+
+enum AnnotationType: String  {
+    case Point = "Point"
+    case Polygon = "Polygon"
+}
+
+struct mapStruct {
+  let name: String
+  let lattitude: CLLocationDegrees
+  let longtitude: CLLocationDegrees
+    let annotationType : AnnotationType
+}
+
+struct criticalInfrastructureFacilities_Manager {
+    
+    func criticalInfrastructureFacilities (datasource : Any , completion : @escaping(mapStruct) -> Void ){
+        dump(datasource)
+        if let datasouce_value  = datasource as? criticalInfrastructureFacilities {
+           // dump(datasouce_value)
+            let notificationObject : [String : String?] = ["title" : datasouce_value.name]
+            NotificationCenter.default.post(name: .mapViewNavigation, object: nil, userInfo: notificationObject)
+            guard let features = datasouce_value.features else { return  }
+            for element in features.enumerated(){
+                if let cordinate = element.element.geometry?.coordinates, let locationName = element.element.properties?.Location ,let geometryType = element.element.geometry?.type ,let lat = cordinate[1], let long = cordinate[0]{
+                    if let GeometryType = AnnotationType.init(rawValue: geometryType){
+                        let value = mapStruct(name: locationName, lattitude: CLLocationDegrees(lat), longtitude: CLLocationDegrees(long), annotationType: GeometryType)
+                        completion(value)
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

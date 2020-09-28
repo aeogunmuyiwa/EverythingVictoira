@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
         cv.setCollectionViewLayout(layout, animated: false)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.showsVerticalScrollIndicator = false
-        cv.backgroundColor = CustomColors.appBackground
+        cv.backgroundColor = .clear
         cv.register(parkDetaiLCollectionViewCell.self, forCellWithReuseIdentifier: "parkDetaiLCollectionViewCell")
         cv.register(OtherParkDetailCollectionViewCell.self, forCellWithReuseIdentifier: "OtherParkDetailCollectionViewCell")
         cv.delegate = self
@@ -28,10 +28,8 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         view.backgroundColor = CustomColors.appBackground
         view.addSubview(collectionView)
-      //  apiManager.init().makeRequest()
         collectionView.pin(to: view)
       
         

@@ -18,8 +18,7 @@ class CustomOtherParkDetaiLCollectionViewCell: UICollectionViewCell {
     let parkView:UIView = {
           let v = UIView()
           v.translatesAutoresizingMaskIntoConstraints = false
-      
-        v.backgroundColor? = .random
+        v.backgroundColor? = CustomColors.appGreen
           v.layer.cornerRadius = 30
           return v
       }()
@@ -88,7 +87,7 @@ class CustomOtherParkDetaiLCollectionViewCell: UICollectionViewCell {
     func setData(){
         guard let data = data else{return}
       
-        parkView.backgroundColor = CustomColors.appBlack
+        parkView.backgroundColor = CustomColors.appGreen
         parkNameLabel.text = data.name
         detailLabel.text = data.detail
     }

@@ -35,7 +35,6 @@ class ServiceListViewModel: NSObject  {
     ]
     init(controller: UIViewController) {
         self.NavigationUtilManager = .init(controller: controller)
-  
     }
    
     
@@ -59,12 +58,18 @@ extension ServiceListViewModel : UICollectionViewDelegate , UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //navigate to the selected controller using the navigation id of Servicelist
-        if let navigationRaw = serviceList[indexPath.row].navigationId?.rawValue {
-            DispatchQueue.main.async {
-                self.NavigationUtilManager?.determineNavigation(navigationControllerIdentifier: navigationRaw, classType: nil, apiKey: nil)
-
-            }
+        if  let cell = collectionView.cellForItem(at: indexPath){
+            CustomAnimination.init().Fadeout(view: cell, completion: {
+                if let navigationRaw = self.serviceList[indexPath.row].navigationId?.rawValue {
+                    DispatchQueue.main.async {
+                        self.NavigationUtilManager?.determineNavigation(navigationControllerIdentifier: navigationRaw, classType: nil, apiKey: nil)
+                    }
+                }
+            })
         }
+        
+        
+
     }
     
     

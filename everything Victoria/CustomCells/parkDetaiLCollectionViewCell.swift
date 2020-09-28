@@ -24,7 +24,7 @@ class parkDetaiLCollectionViewCell: UICollectionViewCell {
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.showsHorizontalScrollIndicator = false
         cv.contentInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
-        cv.backgroundColor = CustomColors.appBackground
+        cv.backgroundColor = .clear
         cv.delegate = self
         cv.dataSource = self
         cv.register(CustomparkDetaiLCollectionViewCell.self, forCellWithReuseIdentifier: "CustomparkDetaiLCollectionViewCell")

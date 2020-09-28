@@ -74,12 +74,12 @@
             </objects>
             <point key="canvasLocation" x="1505.7971014492755" y="140.625"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Everything Victoria-->
         <scene sceneID="3Qe-wN-ifB">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9vO-gR-ecp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Mbd-9a-x4k"/>
+                    <navigationItem key="navigationItem" title="Everything Victoria" id="Mbd-9a-x4k"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1aH-qc-Wnb">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -58,12 +58,17 @@ extension EmergencyServicesViewModel : UITableViewDelegate , UITableViewDataSour
         return 400
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let navigationRaw = datasource.datasource[indexPath.row].navigationId?.rawValue, let classType = datasource.datasource[indexPath.row].classKey {
-           
-            DispatchQueue.main.async {
-                self.NavigationUtilManager?.determineNavigation(navigationControllerIdentifier: navigationRaw, classType: classType, apiKey: self.datasource.datasource[indexPath.row].apiKey)
-            }
+        if let tableView = tableView.cellForRow(at: indexPath){
+            CustomAnimination.init().Fadeout(view: tableView, completion: {
+                if let navigationRaw = self.datasource.datasource[indexPath.row].navigationId?.rawValue, let classType = self.datasource.datasource[indexPath.row].classKey {
+                    DispatchQueue.main.async {
+                        self.NavigationUtilManager?.determineNavigation(navigationControllerIdentifier: navigationRaw, classType: classType, apiKey: self.datasource.datasource[indexPath.row].apiKey)
+                    }
+                }
+            })
         }
+        
+       
     }
     
     

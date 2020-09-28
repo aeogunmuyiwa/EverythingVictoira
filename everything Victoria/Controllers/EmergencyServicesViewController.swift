@@ -15,21 +15,15 @@ class EmergencyServicesViewController: UIViewController {
         button.addTarget(self, action: #selector(swipBackView), for: .touchUpInside)
         button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
         let backButton = UIBarButtonItem(customView: button)
-//        backButton.target = EmergencyServicesViewController.self
-//        backButton.action = #selector(swipBackView)
+
         return backButton
     }()
-//    let btn1 = UIButton()
-//    btn1.setImage(UIImage(named: "img1"), forState: .Normal)
-//    btn1.frame = CGRectMake(0, 0, 30, 30)
-//    btn1.addTarget(self, action: Selector("action1:"), forControlEvents: .TouchUpInside)
-//    self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(customView: btn1), animated: true);
-    
-    
+
     lazy var tableView : UITableView = {
        let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = true
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = CustomColors.appBackground
+        tableView.backgroundView?.backgroundColor = CustomColors.appBackground
         tableView.register(EmergencyServicesTableViewCell.self, forCellReuseIdentifier: "EmergencyServicesTableViewCell")
         return tableView
     }()
@@ -46,9 +40,8 @@ class EmergencyServicesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.addSubview(tableView)
         view.backgroundColor = CustomColors.appBackground
+        view.addSubview(tableView)
         tableView.pin(to: view)
         tableView.dataSource = tableViewObject
         tableView.delegate = tableViewObject

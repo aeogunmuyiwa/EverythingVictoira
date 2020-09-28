@@ -15,6 +15,7 @@ class ServiceListViewController: UIViewController {
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 20, left: 40, bottom: 30, right: 40)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(ServiceListCollectionViewCell .self, forCellWithReuseIdentifier: "ServiceListTableViewCell")
         return collectionView
@@ -28,6 +29,7 @@ class ServiceListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        view.backgroundColor = CustomColors.appBackground
         collectionView.dataSource = collectionViewObject
         collectionView.delegate = collectionViewObject
         collectionView.reloadData()

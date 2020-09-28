@@ -31,9 +31,33 @@ class NavigationUtil {
                 })
             }
         case .UtilityStructures:
-            print("")
+            if let apiKey = apiKey {
+                apiManager.init().dataRequest(with: apiKey, objectType: UtilityStructures.self, completion: { result in
+                   // dump(result)
+                    switch result{
+                        case.failure(let error):
+                            AlertModel.init().presentAlert(contoller: self.MainController, message: error.localizedDescription, title: "Error" , alertType: .error)
+                        case .success(let object) :
+                            self.mapViewNavigation(withIdentifier: navigationControllerIdentifier, objectType: .UtilityStructures, result: object)
+                    }
+                })
+            }
         case .TsunamiHazardLine:
-            print("")
+            if let apiKey = apiKey {
+                apiManager.init().dataRequest(with: apiKey, objectType: TsunamiHazardLine.self, completion: { result in
+                   // dump(result)
+                    switch result{
+                        case.failure(let error):
+                            DispatchQueue.main.async {
+                                AlertModel.init().presentAlert(contoller: self.MainController, message: error.localizedDescription, title: "Error" , alertType: .error)
+                            }
+                          
+                        case .success(let object) :
+                        
+                            self.mapViewNavigation(withIdentifier: navigationControllerIdentifier, objectType: .TsunamiHazardLine, result: object)
+                    }
+                })
+            }
         case .FireDispatchAreas:
             print("")
         default:
@@ -45,21 +69,22 @@ class NavigationUtil {
     func mapViewNavigation(withIdentifier : String , objectType : navigationViewControllers , result : Any ){
         let datasource : [navigationViewControllers : Any] = [objectType : result]
         NotificationCenter.default.post(name: .mapViewNavigation, object: nil, userInfo: datasource)
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateVC(withIdentifier: withIdentifier)  as? MapViewController
         DispatchQueue.main.async {
-            if let viewController = vc  {
-               
-                viewController.mapView.datasource = result
-                viewController.mapView.obectType = objectType
-                viewController.modalPresentationStyle = .fullScreen
-                let navigationController = UINavigationController(rootViewController: viewController)
-                navigationController.modalPresentationStyle = .fullScreen
-                self.MainController?.navigationController?.show(navigationController, sender: self)
-            }
-
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateVC(withIdentifier: withIdentifier)  as? MapViewController
+          
+                if let viewController = vc  {
+                   
+                    viewController.datasource = result
+                    viewController.obectType = objectType
+                    viewController.modalPresentationStyle = .fullScreen
+                    let navigationController = UINavigationController(rootViewController: viewController)
+                    navigationController.modalPresentationStyle = .fullScreen
+                    self.MainController?.navigationController?.show(navigationController, sender: self)
+                }
         }
+
+        
     }
     
     //normal navigation with identiferi
@@ -88,8 +113,9 @@ extension UIStoryboard {
     func instantiateVC(withIdentifier identifier: String) -> UIViewController? {
         // "identifierToNibNameMap" – dont change it. It is a key for searching IDs
         if let identifiersList = self.value(forKey: "identifierToNibNameMap") as? [String: Any] {
+           
             if identifiersList[identifier] != nil {
-                return self.instantiateViewController(withIdentifier: identifier)
+                    return self.instantiateViewController(withIdentifier: identifier)
             }
         }
         return nil

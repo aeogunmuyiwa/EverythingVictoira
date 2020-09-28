@@ -37,6 +37,7 @@ class EmergencyServicesTableViewCell: UITableViewCell {
     }()
     override func awakeFromNib() {
         super.awakeFromNib()
+        contentView.backgroundColor = .white
         setUpConstraints()
         // Initialization code
     }
@@ -47,6 +48,10 @@ class EmergencyServicesTableViewCell: UITableViewCell {
             self.serviceLocation.text = dataSource.locationName
             self.serviceDescription.text = dataSource.description
         }
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
     }
     func setUpConstraints(){
         contentView.addSubview(serviceName)
