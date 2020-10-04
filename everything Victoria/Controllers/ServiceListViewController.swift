@@ -29,12 +29,11 @@ class ServiceListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
         view.backgroundColor = CustomColors.appBackground
         collectionView.dataSource = collectionViewObject
         collectionView.delegate = collectionViewObject
         collectionView.reloadData()
-      
-
     }
     
   

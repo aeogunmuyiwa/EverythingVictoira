@@ -30,7 +30,6 @@ struct mapStruct {
 }
 
 struct criticalInfrastructureFacilities_Manager {
-    
     func criticalInfrastructureFacilities (datasource : Any , completion : @escaping(mapStruct) -> Void ){
         dump(datasource)
         if let datasouce_value  = datasource as? criticalInfrastructureFacilities {
@@ -49,9 +48,6 @@ struct criticalInfrastructureFacilities_Manager {
         }
     }
 }
-
-
-
 
 struct features : Decodable {
     let type : String?

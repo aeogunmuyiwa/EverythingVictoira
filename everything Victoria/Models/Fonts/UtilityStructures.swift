@@ -28,9 +28,7 @@ struct UtilityStructures : Decodable {
 struct UtilityStructures_Manager {
     
     func UtilityStructures_Manager (datasource : Any , completion : @escaping(mapStruct) -> Void ){
-        dump(datasource)
         if let datasouce_value  = datasource as? UtilityStructures {
-           // dump(datasouce_value)
             let notificationObject : [String : String?] = ["title" : datasouce_value.name]
             NotificationCenter.default.post(name: .mapViewNavigation, object: nil, userInfo: notificationObject)
             guard let features = datasouce_value.features else { return  }

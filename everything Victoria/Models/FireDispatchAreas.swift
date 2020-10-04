@@ -1,5 +1,5 @@
 //
-//  TsunamiHazardLine.swift
+//  FireDispatchAreas.swift
 //  everything Victoria
 //
 //  Created by Adebayo  Ogunmuyiwa on 2020-09-28.
@@ -9,8 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
-
-class TsunamiHazardLine: Decodable {
+class FireDispatchAreas: Decodable {
     let type : String?
     let name : String?
     let features : [features]?
@@ -20,14 +19,12 @@ class TsunamiHazardLine: Decodable {
         let geometry : geometry?
     }
     struct properties : Decodable {
-        let OBJECTID_1 : Int?
-        let DataDate : String?
-        let url : String?
-        let Shape_Length : Float?
-        let Shape_Area : Float?
-        let Notes2 : String?
-        let Notes : String?
-
+        let OBJECTID : Int?
+        let SHAPE_Length : Float?
+        let SHAPE_Area : Float?
+        let Name : String?
+        let RunOrder : String?
+        let FDMID : Int?
     }
     struct geometry : Decodable {
         let type : String?
@@ -35,9 +32,9 @@ class TsunamiHazardLine: Decodable {
     }
 }
 
-struct TsunamiHazardLineManager {
-    func TsunamiHazardLine(datasource : Any, completion : (MKPolygon) -> Void){
-        if let datasouce_value  = datasource as? TsunamiHazardLine {
+struct FireDispatchAreas_Manager {
+    func FireDispatchAreas(datasource : Any, completion : (MKPolygon) -> Void){
+        if let datasouce_value  = datasource as? FireDispatchAreas {
             let notificationObject : [String : String?] = ["title" : datasouce_value.name]
             NotificationCenter.default.post(name: .mapViewNavigation, object: nil, userInfo: notificationObject)
             if let features = datasouce_value.features {

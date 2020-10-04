@@ -15,8 +15,6 @@ import CoreLocation
 enum viewType  {
     case CriticalInfrastructureFacilities
     case UtilityStructures
-    
-
 }
 
 
@@ -54,9 +52,9 @@ class MapViewModel:  MKMapView {
     private let identifier = "MapViewModel"
     var currentLocation: MKUserLocation?
     private var locationManager:CLLocationManager!
-    var datasource: Any?
+   // var datasource: Any?
     private var controller : UIViewController?
-    var obectType : navigationViewControllers?
+    //var obectType : navigationViewControllers?
     private let rangeInMeters: Double = 500
     
     //  private var allAnnotations: [MKAnnotation]?
@@ -71,36 +69,10 @@ class MapViewModel:  MKMapView {
         super.init(frame: .zero)
         registerMapAnnotationViews()
         determineCurrentLocation()
-        self.datasource = datasource
-        self.obectType = objectType
         self.controller = controller
         self.delegate = self
-        switch obectType {
-        
-            case .CriticalInfrastructureFacilities:
-                criticalInfrastructureFacilities_Manager.init().criticalInfrastructureFacilities(datasource: datasource, completion: {  result in
-                    DispatchQueue.main.async {
-                        self.MapViewModel_addAnnptation(annotationType: result.annotationType, mapStruct: result)
-                    }
-                })
-                
-            case .UtilityStructures :
-                UtilityStructures_Manager.init().UtilityStructures_Manager(datasource: datasource, completion: {
-                    result in
-                    
-                    DispatchQueue.main.async {
-                        self.MapViewModel_addAnnptation(annotationType: result.annotationType, mapStruct: result)
-                    }
-                })
-        case .TsunamiHazardLine:
-            
-            TsunamiHazardLineManager.init().TsunamiHazardLine(datasource: datasource, completion: { shape in
-                let test = MKMultiPolygon([shape])
-                self.addOverlay(test)
-            })
-            default:
-                print("default")
-        }
+       
+        _ = MapViewHelper.init(model: self, datasource: datasource, obectType: objectType)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -110,15 +82,6 @@ class MapViewModel:  MKMapView {
 
 
 extension MapViewModel : MKMapViewDelegate ,CLLocationManagerDelegate {
-    func MapViewModel_addAnnptation(annotationType : AnnotationType , mapStruct : mapStruct){
-        let annotation = CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: mapStruct.lattitude, longitude: mapStruct.longtitude))
-        annotation.title  = mapStruct.name
-        annotation.subtitle = mapStruct.name
-        // Dispaly all annotations on the map.
-        self.addAnnotation(annotation)
-    }
-    
-    
     /// Register the annotation views with the `mapView` so the system can create and efficently reuse the annotation views.
     /// - Tag: RegisterAnnotationViews
     private func registerMapAnnotationViews() {
@@ -161,6 +124,7 @@ extension MapViewModel : MKMapViewDelegate ,CLLocationManagerDelegate {
         return flagAnnotationView
         
     }
+    
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let details = view.annotation as? CustomAnnotation else { return }
         let placeName = details.title
@@ -173,27 +137,18 @@ extension MapViewModel : MKMapViewDelegate ,CLLocationManagerDelegate {
     
     
     // Providing a multipolygon rendererfunc
-   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if let multiPolygon = overlay as? MKMultiPolygon {
             let renderer = MKMultiPolygonRenderer(multiPolygon: multiPolygon)
             renderer.fillColor = .quaternarySystemFill
             renderer.strokeColor = UIColor.init(hexString: "#F71843")
             renderer.lineWidth = 5.0
             return renderer
-            
         }
         return MKOverlayRenderer(overlay: overlay)
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    func determineCurrentLocation() {
+   private func determineCurrentLocation() {
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -212,14 +167,14 @@ extension MapViewModel : MKMapViewDelegate ,CLLocationManagerDelegate {
     }
     
     
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         
         switch status {
         
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager?.startUpdatingLocation()
             self.showsUserLocation = true
-     
+            
             
         case .denied, .restricted:
             locationManager?.startUpdatingLocation()
@@ -227,7 +182,7 @@ extension MapViewModel : MKMapViewDelegate ,CLLocationManagerDelegate {
             currentLocation = nil
             
         default:
-            print("need location")
+           // print("need location")
             currentLocation = nil
         //todo show alert
         }

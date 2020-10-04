@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2AAD1B84A368125307D26704 /* Pods_everything_Victoria_everything_VictoriaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D313EB08BB9D8B1094104166 /* Pods_everything_Victoria_everything_VictoriaUITests.framework */; };
 		468B6B0325225B280056886F /* TsunamiHazardLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B6B0225225B280056886F /* TsunamiHazardLine.swift */; };
+		468B6B08252280710056886F /* MapViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B6B07252280710056886F /* MapViewHelper.swift */; };
+		468B6B0D252284BA0056886F /* FireDispatchAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B6B0C252284BA0056886F /* FireDispatchAreas.swift */; };
 		46D00EDE251F0DDB00F91830 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00EDD251F0DDB00F91830 /* ApiManager.swift */; };
 		46D00EE3251F132000F91830 /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00EE2251F132000F91830 /* ServiceListViewController.swift */; };
 		46D00EE8251F267300F91830 /* ServiceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00EE7251F267300F91830 /* ServiceListViewModel.swift */; };
@@ -29,6 +31,7 @@
 		46D00F53252222F900F91830 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F52252222F900F91830 /* CustomAnnotationView.swift */; };
 		46D00F582522451300F91830 /* CustomAnimination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F572522451300F91830 /* CustomAnimination.swift */; };
 		46D00F5D252252BF00F91830 /* UtilityStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F5C252252BF00F91830 /* UtilityStructures.swift */; };
+		46DCB183252937BE00C337E7 /* BasicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DCB182252937BE00C337E7 /* BasicViewModel.swift */; };
 		A40551643B0AE6A9F4D2316F /* Pods_everything_VictoriaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D162BAE1B23CA7297FE68B /* Pods_everything_VictoriaTests.framework */; };
 		B24BB2072510D7260063C297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB2062510D7260063C297 /* AppDelegate.swift */; };
 		B24BB2092510D7260063C297 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BB2082510D7260063C297 /* SceneDelegate.swift */; };
@@ -77,6 +80,8 @@
 		0517CFAAF56A5E32F5825378 /* Pods-everything Victoria.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everything Victoria.debug.xcconfig"; path = "Target Support Files/Pods-everything Victoria/Pods-everything Victoria.debug.xcconfig"; sourceTree = "<group>"; };
 		0799E7FFCDA783F73999EA1C /* Pods-everything Victoria.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everything Victoria.release.xcconfig"; path = "Target Support Files/Pods-everything Victoria/Pods-everything Victoria.release.xcconfig"; sourceTree = "<group>"; };
 		468B6B0225225B280056886F /* TsunamiHazardLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsunamiHazardLine.swift; sourceTree = "<group>"; };
+		468B6B07252280710056886F /* MapViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewHelper.swift; sourceTree = "<group>"; };
+		468B6B0C252284BA0056886F /* FireDispatchAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDispatchAreas.swift; sourceTree = "<group>"; };
 		46D00EDD251F0DDB00F91830 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		46D00EE2251F132000F91830 /* ServiceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
 		46D00EE7251F267300F91830 /* ServiceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewModel.swift; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 		46D00F52252222F900F91830 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		46D00F572522451300F91830 /* CustomAnimination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimination.swift; sourceTree = "<group>"; };
 		46D00F5C252252BF00F91830 /* UtilityStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityStructures.swift; sourceTree = "<group>"; };
+		46DCB182252937BE00C337E7 /* BasicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewModel.swift; sourceTree = "<group>"; };
 		48C13A5D392737951CEB83ED /* Pods-everything VictoriaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everything VictoriaTests.debug.xcconfig"; path = "Target Support Files/Pods-everything VictoriaTests/Pods-everything VictoriaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		50FF720B3392FFA64F83F311 /* Pods-everything VictoriaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everything VictoriaTests.release.xcconfig"; path = "Target Support Files/Pods-everything VictoriaTests/Pods-everything VictoriaTests.release.xcconfig"; sourceTree = "<group>"; };
 		A9C538413C160430911AA02F /* Pods-everything Victoria-everything VictoriaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-everything Victoria-everything VictoriaUITests.debug.xcconfig"; path = "Target Support Files/Pods-everything Victoria-everything VictoriaUITests/Pods-everything Victoria-everything VictoriaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +254,8 @@
 				46D00EE7251F267300F91830 /* ServiceListViewModel.swift */,
 				46D00F18251F80C700F91830 /* EmergencyServicesViewModel.swift */,
 				46D00F35251FBBCF00F91830 /* MapViewModel.swift */,
+				468B6B07252280710056886F /* MapViewHelper.swift */,
+				46DCB182252937BE00C337E7 /* BasicViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 				46D00F4D2522223200F91830 /* Annotations.swift */,
 				46D00F572522451300F91830 /* CustomAnimination.swift */,
 				468B6B0225225B280056886F /* TsunamiHazardLine.swift */,
+				468B6B0C252284BA0056886F /* FireDispatchAreas.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -577,6 +586,7 @@
 				B24BB2542510F7EE0063C297 /* CustomOtherParkDetaiLCollectionViewCell.swift in Sources */,
 				46D00F582522451300F91830 /* CustomAnimination.swift in Sources */,
 				B24BB24E2510E39D0063C297 /* CustomPark.swift in Sources */,
+				468B6B08252280710056886F /* MapViewHelper.swift in Sources */,
 				46D00F19251F80C700F91830 /* EmergencyServicesViewModel.swift in Sources */,
 				46D00EE3251F132000F91830 /* ServiceListViewController.swift in Sources */,
 				46D00F43251FD81900F91830 /* AlertModel.swift in Sources */,
@@ -588,7 +598,9 @@
 				B24BB2112510D7260063C297 /* everything_Victoria.xcdatamodeld in Sources */,
 				46D00F36251FBBCF00F91830 /* MapViewModel.swift in Sources */,
 				B24BB24A2510E2280063C297 /* UIView.swift in Sources */,
+				468B6B0D252284BA0056886F /* FireDispatchAreas.swift in Sources */,
 				46D00F23251F8F7500F91830 /* NavigationUtil.swift in Sources */,
+				46DCB183252937BE00C337E7 /* BasicViewModel.swift in Sources */,
 				46D00EE8251F267300F91830 /* ServiceListViewModel.swift in Sources */,
 				B24BB2092510D7260063C297 /* SceneDelegate.swift in Sources */,
 			);

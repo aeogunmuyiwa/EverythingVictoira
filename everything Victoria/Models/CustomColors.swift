@@ -14,6 +14,7 @@ struct CustomColors {
        }
     //#549672
     static let appGreen : UIColor = UIColor.init(hexString: "#A5D0C4")
+    static let appSecondayGreen : UIColor = UIColor.init(hexString: "#549672")
    // static let
    /* #1fb1ae
     #28717b
@@ -21,7 +22,7 @@ struct CustomColors {
     #7cd4e7*/
     
     static let appBackground:UIColor = UIColor.init(hexString: "#1F2634")
-    
+
     static let arrayColors : [UIColor] = [
         UIColor(red: 84/255, green: 150/255, blue: 114/255, alpha: 1),
         UIColor(red: 148/255, green: 204/255, blue: 173/255, alpha: 1),

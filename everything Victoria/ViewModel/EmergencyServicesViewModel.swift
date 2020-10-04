@@ -20,7 +20,7 @@ struct EmergencyServicesdatasouce {
 
 class EmergencyServicesData{
    private let locationName  = "City of Victoria"
-    lazy var datasource : [EmergencyServicesdatasouce] =  {
+     lazy var datasource : [EmergencyServicesdatasouce] =  {
         var datasource = [EmergencyServicesdatasouce]()
         datasource.append(EmergencyServicesdatasouce(ServiceName: "Critical Infrastructure Facilities (OCP)", locationName: locationName, description: "Critical Infrastructure Facilities include features such as: Coast Guard, Ferry, Fire Halls, Police Station, Heliports, Hospital, Seaports, Water Airports, and Government Buildings.", apiKey: "https://opendata.arcgis.com/datasets/5d287a2955f44efe8567f9ef950f2dbc_1.geojson", navigationId: .mapView, classKey: .CriticalInfrastructureFacilities))
         
@@ -36,7 +36,10 @@ class EmergencyServicesData{
 class EmergencyServicesViewModel: NSObject {
     private let cellId = "EmergencyServicesTableViewCell"
     private let NavigationUtilManager : NavigationUtil?
-    private  let datasource = EmergencyServicesData.init()
+    private  lazy var datasource : EmergencyServicesData? = {
+        let datasource = EmergencyServicesData.init()
+        return datasource
+    }()
     
     init(controller: UIViewController) {
         self.NavigationUtilManager = .init(controller: controller)
@@ -46,12 +49,17 @@ class EmergencyServicesViewModel: NSObject {
 }
 extension EmergencyServicesViewModel : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return datasource.datasource.count
+        guard let datasource  = datasource else { return 0 }
+        
+        return datasource.datasource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! EmergencyServicesTableViewCell
-        cell.customInit(dataSource: datasource.datasource[indexPath.row])
+        if let datasource = datasource{
+            cell.customInit(dataSource: datasource.datasource[indexPath.row])
+        }
+        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -59,12 +67,15 @@ extension EmergencyServicesViewModel : UITableViewDelegate , UITableViewDataSour
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let tableView = tableView.cellForRow(at: indexPath){
-            CustomAnimination.init().Fadeout(view: tableView, completion: {
-                if let navigationRaw = self.datasource.datasource[indexPath.row].navigationId?.rawValue, let classType = self.datasource.datasource[indexPath.row].classKey {
-                    DispatchQueue.main.async {
-                        self.NavigationUtilManager?.determineNavigation(navigationControllerIdentifier: navigationRaw, classType: classType, apiKey: self.datasource.datasource[indexPath.row].apiKey)
+            CustomAnimination.init().Fadeout(view: tableView, completion: { [weak self] in
+                if let datasource = self?.datasource{
+                    if let navigationRaw = datasource.datasource[indexPath.row].navigationId?.rawValue, let classType = datasource.datasource[indexPath.row].classKey {
+                        DispatchQueue.main.async {
+                            self?.NavigationUtilManager?.determineNavigation(navigationControllerIdentifier: navigationRaw, classType: classType, apiKey: datasource.datasource[indexPath.row].apiKey)
+                        }
                     }
                 }
+               
             })
         }
         

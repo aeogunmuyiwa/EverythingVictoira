@@ -59,7 +59,22 @@ class NavigationUtil {
                 })
             }
         case .FireDispatchAreas:
-            print("")
+            if let apiKey = apiKey {
+                apiManager.init().dataRequest(with: apiKey, objectType: FireDispatchAreas.self, completion: { result in
+                   // dump(result)
+                    switch result{
+                    
+                        case.failure(let error):
+                            DispatchQueue.main.async {
+                                AlertModel.init().presentAlert(contoller: self.MainController, message: error.localizedDescription, title: "Error" , alertType: .error)
+                            }
+                          
+                        case .success(let object) :
+                        
+                            self.mapViewNavigation(withIdentifier: navigationControllerIdentifier, objectType: .FireDispatchAreas, result: object)
+                    }
+                })
+            }
         default:
             performNavigation(navigationControllerIdentifier: navigationControllerIdentifier)
         }
@@ -96,7 +111,8 @@ class NavigationUtil {
             viewController.modalPresentationStyle = .fullScreen
             let navigationController = UINavigationController(rootViewController: viewController)
             navigationController.modalPresentationStyle = .fullScreen
-            MainController?.navigationController?.show(navigationController, sender: self)
+            MainController?.present(navigationController, animated: true, completion: nil)
+          //  MainController?.navigationController?.show(navigationController, sender: self)
 //            if let MainController = MainController {
 //                navigationController.modalPresentationStyle = .fullScreen
 //                MainController.present(navigationController, animated: true, completion: nil)

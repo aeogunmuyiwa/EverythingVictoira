@@ -54,7 +54,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9x-P0-TrE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6022" y="400"/>
+            <point key="canvasLocation" x="5933" y="506"/>
+        </scene>
+        <!--Financial View Controller-->
+        <scene sceneID="7t4-UG-AaE">
+            <objects>
+                <viewController storyboardIdentifier="FinancialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wca-bJ-vdv" customClass="FinancialViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4na-Yv-fwA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ana-b5-fYI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAK-bh-epL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6874" y="496"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LKo-jc-jdr">

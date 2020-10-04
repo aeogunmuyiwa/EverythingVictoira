@@ -8,6 +8,10 @@
 
 import UIKit
 
+//protocol CollectionViewControllerDataSource : class {
+//    var availableLabels:  { get set }
+//}
+
 class EmergencyServicesViewController: UIViewController {
 
     lazy var backButton : UIBarButtonItem  = {
